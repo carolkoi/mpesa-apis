@@ -1,14 +1,5 @@
 <?php
-/*********************************************
-Company:	Wits Technologies Ltd
-Developer:	Sammy Mwaura Waweru
-Mobile:		+254721428276
-Email:		sammy@witstechnologies.co.ke
-Website:	http://www.witstechnologies.co.ke/
-*********************************************/
 
-//Main class validator
-//Validates all data entries
 class validator{
 
 	function is_String($string) {

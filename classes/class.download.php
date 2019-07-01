@@ -1,15 +1,5 @@
 <?php
-/*
-|-----------------
-| Author:	Life.Object
-| E-Mail:	life.object@gmail.com
-| Website:	http://www.tutorialchip.com/
-| Help:		http://www.tutorialchip.com/php-download-file-script/
-| Version:	1.1
-| Released: November 29, 2010
-| Updated: December 23, 2010
-|------------------
-*/
+
 
 class chip_download {
 	
