@@ -1,0 +1,44 @@
+<form method="post" action="process.php">
+  <div class="form-group">
+    <label for="tele">Phone:</label>
+    <input type="tel" name="mpesa_number" class="form-control" id="tele">
+  </div>
+<div class="form-group">
+    <label for="amt">Amount:</label>  
+<input type="number" name="amt" id="amt" />
+</div>
+  <button type="submit" class="btn btn-default">Donate</button>
+</form>
+
+
+<script>
+var currencyInput = document.querySelector('input[type="currency"]');
+var currency = 'KES'; // https://www.currency-iso.org/dam/downloads/lists/list_one.xml
+
+currencyInput.addEventListener('focus', onFocus);
+currencyInput.addEventListener('blur', onBlur);
+
+function localStringToNumber( s ){
+    return Number(String(s).replace(/[^0-9.-]+/g,""));
+}
+
+function onFocus(e){
+  var value = e.target.value;
+  e.target.value = value ? localStringToNumber(value) : '';
+}
+
+function onBlur(e){
+  var value = e.target.value;
+
+  const options = {
+      maximumFractionDigits : 2,
+      currency              : currency,
+      style                 : "currency",
+      currencyDisplay       : "symbol"
+  }
+  
+  e.target.value = value 
+    ? localStringToNumber(value).toLocaleString(undefined, options)
+    : ''
+}
+</script>
